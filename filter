@@ -1,0 +1,8 @@
+set date Italian
+use STUD new
+index on descend(fio)  to STUD_sex_fio
+set filter to FIO='S'
+
+do while !eof()
+	? fio, sex, dr, stip
+	skip

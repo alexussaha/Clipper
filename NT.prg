@@ -1,0 +1,23 @@
+FUNCTION  FACT(L)
+LOCAL X:=1
+IF L==0
+	RETURN 1
+ENDIF
+FOR I:=1 TO L
+	X:=X*I
+NEXT
+RETURN X
+
+FUNCTION NUMPAS(I)
+FOR J=0 TO I
+	??FACT(I) / (FACT(J)*FACT(I - J))
+NEXT
+RETURN nil
+
+function main()
+LOCAL N:=4
+FOR K=0 to N
+	NUMPAS(K)
+	?
+NEXT
+return nil

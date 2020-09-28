@@ -1,0 +1,9 @@
+set date Italian
+use STUD new
+index on fio  to STUD_fio
+seek 'R'
+
+do while !eof()
+	? fio, sex, dr, stip
+	skip
+enddo
